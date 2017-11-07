@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" href="https://production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+  <link rel="mask-icon" type="" href="https://production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+  <title>CodePen - 購物籃清單</title>
+  {%load staticfiles%}
+  <link rel="stylesheet" href="{%static "css/shoplist.css"%}">
+  
+  
+  
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,400i,700'>
+</head>
+
+<body translate="no" >
+
+  
+<div id="buylist">
+  <h1>MyBuyList購物清單</h1>
+  <div class="buy_item control_panel">
+    <label>產品名稱</label>
+    <input id="input_name" placeholder="名稱..."/>
+    <label>價錢</label>
+    <input id="input_price" placeholder="234..."/><span class="addbtn">+ 新增</span>
+  </div>
+  <div id="items_list"></div>
+</div>
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+    <script >
+    var itemurl = "https://awiclass.monoame.com/api/command.php?type=get&name=itemdata";
+
+// 新增一個商品清單的物件
+var shoplist={}
+
+shoplist.name="MyBuyList 購物清單"
+shoplist.time="2016/09/10"
+shoplist.list= [
+  {name: "吹風機", price: 300},
+  {name: "麥克風", price: 900},
+  {name: "筆電", price: 5400},
+  {name: "手機", price: 9010},
+  {name: "海螺", price: 1290},
+];
+
+$.ajax({
+  url: itemurl,
+  success: function(res){
+    shoplist.list = JSON.parse(res);
+    showlist();
+  }
+  
+})
+
+var item_html='<li id=id_num class="buy_item">item_num. item_name<div class="price">item_price</div><div id=del_id data_del_id = "delid" class="del_btn">X</div></li>';
+
+var total_html="<li class='buy_item total'>總價<div class='price'>total_price</div></li>"
+
+function showlist(){
+  $("#items_list").html(""); //一開始先把所有的item刪掉
+  var total_price = 0
+  for (var i=0; i<shoplist.list.length; i+=1){
+    var item = shoplist.list[i];
+    var item_id = "buyitem_"+ i
+    var del_item_id = "del_buyitem_"+ i
+    total_price+= parseInt(item.price);  // 轉換為數字Int
+
+    var current_item_html = 
+        item_html.replace("item_num", i+1)
+                 .replace("item_name", item.name)
+                 .replace("id_num", item_id)
+                 .replace("del_id", del_item_id)
+                 .replace("item_price", item.price)
+                 .replace("delid", i)
+    ;
+    // var ran_html = '<li id="' + (i+1) + '" class="buy_item">' + i+1 + '.' + item.name +'<div class="price">'+ item.price +'</div><div id='+ del_item_id +' data_del_id = "'+ i +'" class="del_btn">X1</div></li>';
+    $("#items_list").append(current_item_html);
+    //delbtn id buyitem_1
+    $("#"+del_item_id).click(
+      function(){
+        remove_item($(this).attr("data_del_id"));
+      }
+    )
+    
+  }
+  var current_total_html=
+      total_html.replace("total_price", total_price);
+  $("#items_list").append(current_total_html)
+}
+showlist();
+
+
+  
+$(".addbtn").click(function(){
+  shoplist.list.push(
+  {
+    name: $("#input_name").val(),
+    price: $("#input_price").val()
+  }
+    )
+   $("#input_name").val(""),
+   $("#input_price").val("")  // 按新增以後，input欄位為空白
+  showlist()
+})
+
+function remove_item(id){
+  shoplist.list.splice(id, 1);
+  showlist()
+}
+  </script>
+
+  
+  
+
+</body>
+</html>

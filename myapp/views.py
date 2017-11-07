@@ -27,3 +27,9 @@ def brand(request):
 
 def catanimate(request):
 	return render(request, "catanimate.html", locals())
+
+def shoplist(request):
+	return render(request, "shoplist.html", locals())
+
+def bootstrap1(request):
+	return render(request, "bootstrap1.html", locals())
