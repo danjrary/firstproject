@@ -33,3 +33,9 @@ def shoplist(request):
 
 def bootstrap1(request):
 	return render(request, "bootstrap1.html", locals())
+
+def bs2(request):
+	return render(request, "bs2.html", locals())
+
+def bs3(request):
+	return render(request, "bs3.html", locals())

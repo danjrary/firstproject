@@ -1,0 +1,94 @@
+* {
+  font-family: 微軟正黑體;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: 900;
+}
+
+header.jumbotron {
+  text-align: center;
+  background-image: url(https://static.pexels.com/photos/8807/sopot.jpg);
+  background-size: cover;
+  background-position: center center;
+  padding: 160px;
+  color: white;
+}
+
+section {
+  text-align: center;
+  padding: 80px 0px;
+}
+section .section-heading {
+  font-size: 36px;
+  margin-top: 0px;
+}
+section .section-subheading {
+  font-size: 16px;
+}
+
+.col-sea {
+  padding: 90px;
+}
+.col-sea img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+section.story {
+  background-color: #eee;
+}
+section.story .col.md-6 {
+  padding: 20px;
+}
+section.story .icon-sea {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+section.pictures {
+  padding: 0px;
+  color: white;
+}
+section.pictures .col-md-6 {
+  padding: 150px;
+  cursor: pointer;
+}
+section.pictures .col-md-6:hover p {
+  opacity: 0.7;
+}
+section.pictures .col-md-6:hover:before {
+  filter: brightness(0.5);
+  background-size: 130% auto;
+}
+section.pictures .col-md-6:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition-duration: 0.5s;
+  background-position: center center;
+}
+section.pictures .pic1:before {
+  background-image: url(https://m.popkey.co/9ceb31/mEklA.gif);
+  background-size: 120% auto;
+  transition-duration: 0.5s;
+}
+section.pictures .pic2:before {
+  background-image: url(http://i.dailymail.co.uk/i/pix/2013/06/26/article-0-1A85960F000005DC-389_634x424.jpg);
+  background-size: 120% auto;
+  transition-duration: 0.5s;
+}
+section.pictures p {
+  opacity: 0.4;
+  transition-duration: 0.5s;
+}
+
+section.ask {
+  background-color: #01233C;
+  color: white;
+}
