@@ -42,3 +42,9 @@ def bs3(request):
 
 def ystudio(request):
 	return render(request, "ystudio.html", locals())
+
+def hahow(request):
+	return render(request, "hahow.html", locals())
+
+def piano(request):
+	return render(request, "piano.html", locals())
