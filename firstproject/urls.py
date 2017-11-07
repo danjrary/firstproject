@@ -32,5 +32,6 @@ urlpatterns = [
     url(r'^shoplist/$', shoplist),
     url(r'^bootstrap1/$', bootstrap1),
     url(r'^bs2/$', bs2),
-    url(r'^bs3/$', bs3)
+    url(r'^bs3/$', bs3),
+    url(r'^ystudio/$', ystudio)
 ]

@@ -39,3 +39,6 @@ def bs2(request):
 
 def bs3(request):
 	return render(request, "bs3.html", locals())
+
+def ystudio(request):
+	return render(request, "ystudio.html", locals())

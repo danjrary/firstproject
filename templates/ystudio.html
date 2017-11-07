@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" href="https://production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+  <link rel="mask-icon" type="" href="https://production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+  <title>CodePen - Yellow Studio - Project6</title>
+  {% load staticfiles %}
+  <link rel="stylesheet" href="{%static 'css/ystudio.css'%}">
+  
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Oswald'>
+</head>
+
+<body translate="no" >
+
+  
+<nav class="navbar navbar-default navbar-fixed-top at_top">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="#header_index">Yellow Studio</a>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#section_about">About</a></li>
+        <li><a href="#section_works">Works</a></li>
+        <li><a href="#section_contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<header id="header_index">
+  <div class="container"><img class="icon" src="http://awiclass.monoame.com/img/webpic/w_icon.svg" alt=""/><img class="marginbottom mountain" src="http://awiclass.monoame.com/img/margin/m_index.svg" alt=""/>
+    <div class="explore at_top">EXPLORE</div>
+  </div>
+</header>
+<section id="section_about"><img class="marginbottom" src="http://awiclass.monoame.com/img/margin/m_about.svg" alt=""/><img id="cat" src="http://awiclass.monoame.com/catpic/cat_lefttop.png" alt=""/>
+  <div id="cross"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-4"><img class="tri tri1" src="http://awiclass.monoame.com/img/webpic/w_tri1.svg" alt=""/>
+        <h2 class="r1text">WORKS IN YELLOW</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4"><img class="tri tri2" src="http://awiclass.monoame.com/img/webpic/w_tri2.svg" alt=""/></div>
+      <div class="col-sm-8"><img class="tri tri3" src="http://awiclass.monoame.com/img/webpic/w_tri3.svg" alt=""/>
+        <h3 class="r2text">YELLOW STUDIO-Website Design / Development</h3>
+        <h3 class="r2text">Interactive Art Design</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8">
+        <h2 class="r3text">430 MORE SUCCESS CASES</h2>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <!-- 修正浮動錯誤-->
+    <div class="row">
+      <div class="col-sm-4 btn-area"><a class="btn btn-lg btn-default" href="#section_works">More story</a><img class="tri tri4" src="http://awiclass.monoame.com/img/webpic/w_tri4.svg" alt=""/></div>
+      <div class="col-sm-4"><img class="tri tri5" src="http://awiclass.monoame.com/img/webpic/w_tri5.svg" alt=""/></div>
+    </div>
+  </div>
+</section>
+<section id="section_service">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>Service</h1>
+      </div>
+      <div class="col-sm-4"><img class="icon_service" src="http://awiclass.monoame.com/img/webpic/w_service_icon1.svg" alt=""/>
+        <h3>CI/VI Design</h3>
+      </div>
+      <div class="col-sm-4"><img class="icon_service" src="http://awiclass.monoame.com/img/webpic/w_service_icon2.svg" alt=""/>
+        <h3>MottionGraphic</h3>
+      </div>
+      <div class="col-sm-4"><img class="icon_service" src="http://awiclass.monoame.com/img/webpic/w_service_icon3.svg" alt=""/>
+        <h3>Web Development</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="section_works"><img class="marginbottom mountain" src="http://awiclass.monoame.com/img/margin/m_works.svg" alt=""/>
+  <div class="container" id="app">
+    <div class="row" v-if="works.length&gt;0">
+      <div class="col-sm-12">
+        <h1> Works</h1>
+      </div>
+    </div>
+    {% verbatim %}
+    <div class="row">
+      <div class="col-sm-6 work big"><img :src="works[1].img" alt=""/>
+        <div class="texts">
+          <h4 class="title">{{works[1].name}}</h4>
+          <p class="content" v-html="works[1].content.substr(0,40)"></p>
+          <!-- 如果沒有用v-html，文字前面會有p程式碼-->
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="col-sm-6 work" v-for="w in works.slice(2,6)"><img :src="w.img" alt=""/>
+          <div class="texts">
+            <h4 class="title">{{w.name}}</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endverbatim %}
+  </div>
+</section>
+<section id="section_contact"><img class="cat" id="cat_blue" src="http://awiclass.monoame.com/catpic/cat_blue_cat.png"/><img class="cat" id="cat_yellow" src="http://awiclass.monoame.com/catpic/cat_yellow_cat.png"/><img class="cat" id="cat_grey" src="http://awiclass.monoame.com/catpic/cat_grey_cat.png"/>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="mails">
+          <div class="mailcover"><img src="http://awiclass.monoame.com/img/webpic/w_mail_cover.svg" alt=""/></div>
+          <div class="mailbody">
+            <h5>Dear Yellow Stidio</h5>
+            <label>Name</label>
+            <input type="text"/>
+            <label>Email</label>
+            <input type="text"/>
+            <label>Content</label>
+            <textarea></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <h2>CONTACT</h2><br/>
+        <p>If you have any question about us,<br> Don't hesitate to contact us!</p><br/><br/>
+        <p>Yellowstudio@gmail.com <br>Address: Tapei<br>Phone: 12345678</p>
+      </div>
+    </div>
+  </div>
+</section>
+<footer id="footer"><img class="icon" src="http://awiclass.monoame.com/img/webpic/w_icon_black.svg" alt=""/></footer>
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.2/vue.js'></script>
+
+    <script >
+    $(window).scroll(function(e){
+  if ($(window).scrollTop()<=0)
+    $(".explore, .navbar").addClass("at_top");
+  else
+    $(".explore, .navbar").removeClass("at_top");
+})
+  
+$(document).on('click', 'a', function(event){
+  event.preventDefault();
+  var target = $(this).attr('href');
+  $('html,body').animate({
+    scrollTop: $(target).offset().top
+  }, 500)
+})
+  
+// preventDefault預防執行預設動作
+
+// -----About的動畫---------------------
+$(window).mousemove(function(evt){
+  var pagex = evt.pageX
+  var pagey = evt.pageY
+  
+  var x=pagex - $("#section_about").offset().left;
+  var y=pagey - $("#section_about").offset().top
+  
+  // 滑鼠游標
+  $("#cross").css("left", x+"px");
+  $("#cross").css("top", y+"px");
+  // 滑鼠游標在特定範圍內才顯示
+  if (y<0 || y>$("#section_about").outerHeight())
+    $("#cross").css("opacity", 0)
+  else
+    $("#cross").css("opacity", 1)
+  
+  //貓咪動畫
+var catplace=$("#cat").offset().left+$("#cat").width()/2;
+var cattop=$("#cat").offset().top;
+
+var img_url="http://awiclass.monoame.com/catpic/"
+
+if (pagex<catplace-50)
+  $("#cat").attr("src",img_url+"cat_left.png")
+else if (pagex>catplace+50)
+  $("#cat").attr("src",img_url+"cat_right.png")
+else
+  $("#cat").attr("src",img_url+"cat_top.png")
+
+if (pagex<catplace-50 && pagey<cattop)
+  $("#cat").attr("src",img_url+"cat_lefttop.png")
+if (pagex>catplace+50 && pagey<cattop)
+  $("#cat").attr("src",img_url+"cat_righttop.png")
+
+// 貓咪站立
+function detect_cat(cat_id,x){
+  var catplace=$(cat_id).offset().left+$(cat_id).width()/2
+  if(Math.abs(x - catplace)<80)
+    $(cat_id).css("bottom", "0px")
+  else
+    $(cat_id).css("bottom", "-50px")
+}
+
+// 觸發貓咪站立
+detect_cat("#cat_yellow", pagex);
+detect_cat("#cat_blue", pagex);
+detect_cat("#cat_grey", pagex);
+
+  
+  
+  
+   // 讓山可以左右移動
+  $(".mountain").css("transform", "translateX("+(pagex/-20+50)+"px)")
+  
+  $(".r1text").css("transform", "translateX("+(y/-5)+"px)")
+  $(".r2text").css("transform", "translateX("+(y/-10)+"px)")
+  $(".r3text").css("transform", "translateX("+(y/-12)+"px)")
+  
+  $(".tri1").css("transform", "translateX("+(x/-5)+"px)")
+  $(".tri2").css("transform", "translateX("+(x/-10)+"px)")
+  $(".tri3").css("transform", "translateX("+(x/-12)+"px)")
+  $(".tri4").css("transform", "translateX("+(x/-14)+"px)")
+  $(".tri5").css("transform", "translateX("+(x/-16)+"px)")
+ 
+  
+})
+
+
+
+
+
+// --------------------------
+
+var vm = new Vue({
+  el: "#app",
+  data: {
+    works: []
+  },
+  mounted: function(){
+    var vobj = this;
+    $.ajax({
+      url: "https://awiclass.monoame.com/api/command.php?type=get&name=projects",
+      success: function(res){
+        vobj.works = JSON.parse(res)
+      }
+    })
+  }
+})
+  </script>
+
+  
+  
+
+</body>
+</html>
+ 
