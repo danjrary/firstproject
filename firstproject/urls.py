@@ -36,5 +36,6 @@ urlpatterns = [
     url(r'^ystudio/$', ystudio),
     url(r'^hahow/$', hahow),
     url(r'^piano/$', piano),
-    url(r'^index/$', index)
+    url(r'^index/$', index),
+    url(r'^index1/$', index1)
 ]

@@ -51,3 +51,6 @@ def piano(request):
 
 def index(request):
 	return render(request, "index.html", locals())
+
+def index1(request):
+	return render(request, "index1.html", locals())
