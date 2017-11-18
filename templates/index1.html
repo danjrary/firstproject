@@ -13,6 +13,7 @@
   
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
 <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
 
       <style>
       @charset "UTF-8";
@@ -125,7 +126,10 @@ header#header_index .top_outline {
   position: absolute;
   top: -100%;
   right: 0%;
-  transform: rotate(30deg) scale(2, 2);
+  opacity: 0.9;
+  transform: rotate(0deg) scale(1.5, 1.5);
+  animation: ani2 infinite linear 10s;
+  animation-duration: 10s;
 }
 header#header_index .left_background {
   position: absolute;
@@ -140,6 +144,8 @@ header#header_index .left_background .left_blue60 {
 }
 header#header_index .left_background .left_blue80 {
   transform: translate(-450px, 150px) scale(1.2, 1.2);
+  animation: ani1 infinite 8s;
+  animation-delay: 2s;
 }
 header#header_index .left_background .left_cl {
   transform: translate(-600px, 100px) scale(0.8, 0.8);
@@ -168,6 +174,28 @@ header#header_index .right_background .right_blue60 {
   transform: translate(140px, 140px) rotate(72deg) scale(0.5, 0.5);
 }
 
+@keyframes ani1 {
+  0% {
+    transform: translate(-450px, 150px) rotate(0deg) scale(1.2, 1.2);
+  }
+  100% {
+    transform: translate(-450px, 150px) rotate(360deg) scale(1.2, 1.2);
+  }
+}
+@keyframes ani2 {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1.5, 1.5);
+  }
+  50% {
+    opacity: 0.6;
+    transform: rotate(180deg) scale(1.5, 1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg) scale(1.5, 1.5);
+  }
+}
 section#section_questions {
   position: relative;
   min-height: 1050px;
@@ -607,7 +635,7 @@ section#section_services {
   position: relative;
 }
 section#section_services .margin_top {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 section#section_services .title_area {
   border-bottom: 3px solid #4285F4;
@@ -640,13 +668,26 @@ section#section_services .icon_s {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+@media screen and (max-width: 1000px) {
+  section#section_services .icon_s {
+    width: 150px;
+    height: 150px;
+  }
+}
 section#section_services .bgc {
   background-color: rgba(66, 133, 244, 0.2);
   width: 400px;
-  height: 300px;
+  height: 250px;
   border-radius: 5%;
   vertical-align: middle;
   transform: translateY(20%);
+}
+@media screen and (max-width: 1000px) {
+  section#section_services .bgc {
+    width: 250px;
+    height: 250px;
+    transform: translateY(40%);
+  }
 }
 @media screen and (max-width: 765px) {
   section#section_services .bgc {
@@ -657,7 +698,7 @@ section#section_services .bgc {
 footer#footer {
   background-color: #1f4478;
   color: #c7c7c7;
-  margin-top: 50px;
+  margin-top: 100px;
   padding: 30px 0px;
   text-align: center;
 }
@@ -697,13 +738,13 @@ footer#footer h3 {
 <header id="header_index">
   <div class="container"><img class="top_outline" src="https://firstprojectbook.herokuapp.com/static/images/bg_el_outline.svg" alt=""/>
     <div class="left_background"><img class="left_outline" src="https://firstprojectbook.herokuapp.com/static/images/bg_el_outline.svg" alt=""/><img class="left_blue60" src="https://firstprojectbook.herokuapp.com/static/images/bg_el_blue_60.svg" alt=""/><img class="left_blue80" src="https://firstprojectbook.herokuapp.com/static/images/bg_el_blue_80.svg" alt=""/><img class="left_cl" src="https://firstprojectbook.herokuapp.com/static/images/bg_el_circle_line.svg" alt=""/><img class="left_vague" src="https://firstprojectbook.herokuapp.com/static/images/bg_el_vague.svg" alt=""/></div>
-    <div class="right_background"><img class="right_vague" src="https://firstprojectbook.herokuapp.com/static/images/bg_el_vague.svg" alt=""/><img class="right_cl" src="https://firstprojectbook.herokuapp.com/static/images/bg_el_circle_line.svg" alt=""/><img class="right_outline" src="https://firstprojectbook.herokuapp.com/static/images/bg_el_outline.svg" alt=""/><img class="right_shadow" src="https://firstprojectbook.herokuapp.com/static/images/bg_el_shadow1.svg" alt=""/><img class="right_blue60" src="https://firstprojectbook.herokuapp.com/static/images/bg_el_blue_60.svg" alt=""/></div>
-    <div class="row">
+    <div class="right_background animated fadeIn"><img class="right_vague" src="https://firstprojectbook.herokuapp.com/static/images/bg_el_vague.svg" alt=""/><img class="right_cl" src="https://firstprojectbook.herokuapp.com/static/images/bg_el_circle_line.svg" alt=""/><img class="right_outline" src="https://firstprojectbook.herokuapp.com/static/images/bg_el_outline.svg" alt=""/><img class="right_shadow" src="https://firstprojectbook.herokuapp.com/static/images/bg_el_shadow1.svg" alt=""/><img class="right_blue60" src="https://firstprojectbook.herokuapp.com/static/images/bg_el_blue_60.svg" alt=""/></div>
+    <div class="row" data-center="transform: translateY(0px)" data-top="transform: translateY(50px)">
       <div class="col-sm-12">
-        <h2>改變我們的環境與社會<br>從關注企業社會責任開始</h2>
+        <h2 class="animated fadeInLeft">改變我們的環境與社會<br>從關注企業社會責任開始</h2>
       </div>
       <div class="col-sm-12">
-        <div class="searchbox">
+        <div class="searchbox animated fadeInLeft">
           <div class="search_btn"> <i class="fa fa-arrow-right"></i></div>
           <input class="search" type="text" placeholder="搜尋企業名稱"/>
         </div>
@@ -720,7 +761,7 @@ footer#footer h3 {
         <h5>台灣歷年累積的CSR報告數量已超過1,400多本<br>最早期是從2002年開始編製CSR報告</h5>
       </div>
     </div>
-    <div class="row highlight">
+    <div class="row display_none">
       <div class="col-sm-5 col-sm-offset-1 col-xs-12">
         <h4>2016年全台編製約458本</h4>
         <div class="chart_area">
@@ -751,13 +792,13 @@ footer#footer h3 {
       <div class="col-sm-12"><img class="background" src="https://firstprojectbook.herokuapp.com/static/images/bg_el_blue_90.svg" alt=""/></div>
     </div>
     <div class="row top_margin">
-      <div class="col-sm-12">
+      <div class="col-sm-12" data-bottom="transform: translateY(-40px)" data-center="transform: translateY(30px)">
         <h2>三分鐘了解企業社會責任</h2>
       </div>
     </div>
     <div class="row question_list">
       <div class="col-sm-5">
-        <div class="question">
+        <div class="question" data-bottom="transform: translateX(-50px); opacity:0" data--100-bottom="transform: translateX(30px); opacity: 1">
           <div class="panel">企業社會責任是甚麼？
             <div class="arrow_left"></div>
           </div>
@@ -774,7 +815,7 @@ footer#footer h3 {
         <div class="circle">2</div>
       </div>
       <div class="col-sm-5 col-sm-offset-7">
-        <div class="question">
+        <div class="question" data-bottom="transform: translateX(50px); opacity:0" data--100-bottom="transform: translateX(-30px); opacity: 1">
           <div class="panel">利害關係人是什麼？
             <div class="arrow_right"></div>
           </div>
@@ -784,7 +825,7 @@ footer#footer h3 {
     </div>
     <div class="row">
       <div class="col-sm-5">
-        <div class="question">
+        <div class="question" data-bottom="transform: translateX(-50px); opacity:0" data--100-bottom="transform: translateX(30px); opacity: 1">
           <div class="panel">企業為什麼要重視CSR？
             <div class="arrow_left"></div>
           </div>
@@ -800,7 +841,7 @@ footer#footer h3 {
         <div class="circle">4</div>
       </div>
       <div class="col-sm-5 col-sm-offset-7">
-        <div class="question">
+        <div class="question" data-bottom="transform: translateX(50px); opacity:0" data--100-bottom="transform: translateX(-30px); opacity: 1">
           <div class="panel">公民為什麼要重視CSR？
             <div class="arrow_right"></div>
           </div>
@@ -810,7 +851,7 @@ footer#footer h3 {
     </div>
     <div class="row">
       <div class="col-sm-5">
-        <div class="question">
+        <div class="question" data-bottom="transform: translateX(-50px); opacity:0.1" data--100-bottom="transform: translateX(30px); opacity: 1">
           <div class="panel">公民要如何參與CSR？
             <div class="arrow_left"></div>
           </div>
@@ -826,7 +867,7 @@ footer#footer h3 {
         <div class="circle">6</div>
       </div>
       <div class="col-sm-5 col-sm-offset-7">
-        <div class="question">
+        <div class="question" data-bottom="transform: translateX(50px); opacity:0" data--100-bottom="transform: translateX(-30px); opacity: 1">
           <div class="panel">企業社會責任報告是什麼？
             <div class="arrow_right"></div>
           </div>
@@ -844,6 +885,8 @@ footer#footer h3 {
         <h5>在台灣已經有相當數量的CSR報告，但卻鮮少人知道...<br>如何讓更多人接觸到CSR資訊為主要的挑戰</h5>
       </div>
     </div>
+  </div>
+  <div class="container" data-100-bottom="opacity:1; transform: scale(0.7)" data-bottom="opacity:1; transform: scale(1)" data--100-top="opacity:0.4; transform: scale(1)">
     <div class="row text_center">
       <div class="col-sm-4 col-xs-12">
         <h4 class="c_title">認知</h4>
@@ -986,10 +1029,10 @@ footer#footer h3 {
           <p>由於目前的CSR報告皆以PDF格式編製，現階段的解決方案，主要是透過爬蟲程式自動掃描所有文字內容，轉換為JSON檔案匯入資料庫。搭配人工校對的方式，確認CSR報告內容的正確性與完整性。<br><br>使用者可以針對CSR報告內容進行關鍵字搜尋，找出各自關心的議題，並從中探索出永續發展的各種可能。</p>
         </div>
       </div>
-      <div class="col-sm-4 col-sm-offset-1 col-xs-8 col-xs-offset-2 bgc"><img class="icon_s" src="https://firstprojectbook.herokuapp.com/static/images/icon_digital_pdf.svg" alt=""/></div>
+      <div class="col-sm-4 col-sm-offset-1 col-xs-8 bgc" data-bottom="transform: translateX(50px) translateY(20%); opacity:0" data--100-bottom="transform: translateX(-30px) translateY(20%); opacity: 1"><img class="icon_s" src="https://firstprojectbook.herokuapp.com/static/images/icon_digital_pdf.svg" alt=""/></div>
     </div>
     <div class="row margin_top">
-      <div class="col-sm-4 col-sm-offset-1 col-xs-8 col-xs-offset-2 bgc"><img class="icon_s" src="https://firstprojectbook.herokuapp.com/static/images/icon_comment2.svg" alt=""/></div>
+      <div class="col-sm-4 col-sm-offset-1 col-xs-8 bgc" data-bottom="transform: translateX(-50px) translateY(20%); opacity:0.1" data--100-bottom="transform: translateX(30px) translateY(20%); opacity: 1"><img class="icon_s" src="https://firstprojectbook.herokuapp.com/static/images/icon_comment2.svg" alt=""/></div>
       <div class="col-sm-5 col-sm-offset-1 col-xs-8 col-xs-offset-2">
         <div class="row title_area">
           <h3>互動</h3>
@@ -1010,10 +1053,10 @@ footer#footer h3 {
           <p>平台提供分析儀表板，讓使用者可以自由分析資料庫數據。對於企業而言，可以進行標竿學習與競爭者分析，了解相同產業是如何實踐社會或環境責任。<br><br>對於公民而言，可以系統化的檢視企業的排碳、用水、廢棄物產量等數據資料，從中篩選出具有潛在風險的族群。</p>
         </div>
       </div>
-      <div class="col-sm-4 col-sm-offset-1 bgc"><img class="icon_s" src="https://firstprojectbook.herokuapp.com/static/images/icon_analytics.svg" alt=""/></div>
+      <div class="col-sm-4 col-sm-offset-1 bgc" data-bottom="transform: translateX(50px) translateY(20%); opacity:0" data--100-bottom="transform: translateX(-30px) translateY(20%); opacity: 1"><img class="icon_s" src="https://firstprojectbook.herokuapp.com/static/images/icon_analytics.svg" alt=""/></div>
     </div>
     <div class="row margin_top">
-      <div class="col-sm-4 col-sm-offset-1 bgc"><img class="icon_s" src="https://firstprojectbook.herokuapp.com/static/images/icon_global_standard.svg" alt=""/></div>
+      <div class="col-sm-4 col-sm-offset-1 bgc" data-bottom="transform: translateX(-50px) translateY(20%); opacity:0.1" data--100-bottom="transform: translateX(30px) translateY(20%); opacity: 1"><img class="icon_s" src="https://firstprojectbook.herokuapp.com/static/images/icon_global_standard.svg" alt=""/></div>
       <div class="col-sm-5 col-sm-offset-1 col-xs-8 col-xs-offset-2">
         <div class="row title_area">
           <h3>管理</h3>
@@ -1056,6 +1099,7 @@ footer#footer h3 {
   
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js'></script>
 
     <script >
     // 圖表數據標籤的參考作法https://stackoverflow.com/questions/42556835/show-values-on-top-of-bars-in-chart-js
@@ -1164,6 +1208,54 @@ var pieChart = new Chart(ctx,{
         }
     }
 });
+
+// var inView = false; 
+ 
+// function isScrolledIntoView(elem){
+//   var docViewTop = $(window).scrollTop(); 
+//   var docViewBottom = docViewTop + $(window).height(); 
+//   var elemTop = $(elem).offset().top; 
+//   var elemBottom = elemTop + $(elem).height(); 
+//   return(elemTop <= docViewBottom)&&(elemBottom >= docViewTop); 
+// }
+ 
+// $(window).scroll(function(){
+//   if(isScrolledIntoView('#canvas'){
+//      if(inView)
+// } inView = true; 
+// new Chart(document.getElementById(“canvas”)。getContext(“2d”)Pie(data); 
+// } else {
+//  inView = false; 
+// } 
+// )}); 
+
+var inView = false;
+
+function isScrolledIntoView(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop));
+}
+
+$(window).scroll(function() {
+    if (isScrolledIntoView('#pieChart')) {
+        if (inView) { return; }
+        inView = true;
+        new Chart(document.getElementById("canvas").getContext("2d")).Pie(data);
+    } else {
+        inView = false;  
+    }
+});
+
+
+var s = skrollr.init();
+
+// 在console輸入$(window).scrollTop()，可以查詢目前的頁面位置
   </script>
 
   
