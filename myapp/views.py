@@ -49,8 +49,11 @@ def hahow(request):
 def piano(request):
 	return render(request, "piano.html", locals())
 
-def index(request):
-	return render(request, "index.html", locals())
+def index2(request):
+	return render(request, "index2.html", locals())
 
 def index1(request):
 	return render(request, "index1.html", locals())
+
+def index(request):
+	return render(request, "index.html", locals())
