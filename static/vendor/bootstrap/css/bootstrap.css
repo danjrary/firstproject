@@ -8388,7 +8388,6 @@ a.text-dark:focus, a.text-dark:hover {
   position: relative;
   border: 1px solid #D3D3D3;
   border-radius: 3px;
-  margin: 0px 25px;
   top: -30px;
   background-color: rgba(255,255,255, 1);
   box-shadow: 0px 2px 5px rgba(0,0,0,0.1)
@@ -8438,4 +8437,30 @@ a.text-dark:focus, a.text-dark:hover {
 
 
 /*-----disclosure_score-----*/
+
+.h7 {
+  font-size: 0.6rem
+}
+
+.font_blue {
+  color: #007bff;
+  font-weight: 900;
+  cursor: pointer;
+  text-align: center;
+
+}
+
+.font_green {
+  color: #28a745;
+  font-weight: 900;
+  cursor: pointer;
+  text-align: center;
+}
+
+.font_orange {
+  color: #fd7e14;
+  font-weight: 900;
+  cursor: pointer;
+  text-align: center;
+}
 
