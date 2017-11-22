@@ -8439,7 +8439,12 @@ a.text-dark:focus, a.text-dark:hover {
 /*-----disclosure_score-----*/
 
 .h7 {
-  font-size: 0.6rem
+  font-size: 0.8rem
+}
+
+.h8 {
+  font-size: 0.6em;
+
 }
 
 .font_blue {
