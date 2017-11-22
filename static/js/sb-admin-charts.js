@@ -114,7 +114,7 @@ var PieChart_score = new Chart(ctx, {
   type: 'doughnut',
   data: {
     datasets: [{
-      data: [90, 10],
+      data: [83, 17],
       backgroundColor: ['#4285F4', '#D8D8D8'],
     }],
   },
