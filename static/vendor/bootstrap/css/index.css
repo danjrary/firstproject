@@ -101,3 +101,21 @@
   font-weight: 900;
   font-size: 1rem;
 }
+
+.section_title_blue {
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: #007bff;
+}
+
+.section_title_green {
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: #28a745;
+}
+
+.section_title_red {
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: #dc3545;
+}
