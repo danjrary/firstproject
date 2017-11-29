@@ -57,3 +57,6 @@ def index1(request):
 
 def index(request):
 	return render(request, "index.html", locals())
+
+def pdfjs(request):
+	return render(request, "pdfjs.html", locals())

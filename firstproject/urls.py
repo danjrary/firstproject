@@ -38,5 +38,6 @@ urlpatterns = [
     url(r'^piano/$', piano),
     url(r'^index2/$', index2),
     url(r'^index1/$', index1),
-    url(r'^index/$', index)
+    url(r'^index/$', index),
+    url(r'^pdfjs/$', pdfjs)
 ]
