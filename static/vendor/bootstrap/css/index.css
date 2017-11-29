@@ -95,3 +95,9 @@
 .display_non {
   display: none;
 }
+
+/*-----外部評比-----*/
+.award_title {
+  font-weight: 900;
+  font-size: 1rem;
+}
