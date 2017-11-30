@@ -119,3 +119,29 @@
   font-size: 1.2rem;
   color: #dc3545;
 }
+
+.img_size {
+  height: 100%
+}
+
+.logo_area {
+  width: 200px;
+  height: 60px
+}
+
+.img_mh {
+  max-height: 4rem;
+  width: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/*-----目標設定-----*/
+
+.card_body_target {
+  padding: 1rem;
+}
+
+.target_number_green {
+  color: #1b8e35;
+}
