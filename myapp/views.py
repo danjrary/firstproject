@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from datetime import datetime
-from myapp.models import company
+from myapp.models import *
 
 # Create your views here.
 def sayhello(request):
@@ -57,6 +57,7 @@ def index1(request):
 	return render(request, "index1.html", locals())
 
 def index(request):
+	goal = sdgs.objects.all().order_by('id')
 	return render(request, "index.html", locals())
 
 def pdfjs(request):
@@ -64,7 +65,7 @@ def pdfjs(request):
 
 def listone(request):
 	try:
-		unit = company.objects.get(cName="AOU")
+		unit = company.objects.get(cName="veda")
 	except:
 		errormessage = "讀取錯誤"
 	return render(request, "listone.html", locals())
@@ -72,3 +73,5 @@ def listone(request):
 def listall(request):
 	companys = company.objects.all().order_by('id')
 	return render(request, "listall.html", locals())
+
+

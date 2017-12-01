@@ -408,6 +408,14 @@
 
       <div class="mb-0 mt-4">
         <div>SDGs永續發展目標</div>
+        <div>
+          <img class="goal_img" src="https://i0.wp.com/www.un.org/sustainabledevelopment/wp-content/uploads/2015/05/E_SDG_Icons-03.jpg?fit=466%2C466" alt="">
+        </div>
+        
+        {% for sdg in goal %}
+        <div>{{sdg.sdg_Name}}</div>
+        <img src="{{sdg.sdg_Num}}" alt="">
+        {% endfor %}
       </div>
       <hr class="mt-2">
       <!-- 最新訊息 -->

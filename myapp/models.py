@@ -11,4 +11,10 @@ class company(models.Model):
 	def __str__(self):
 		return self.cName
 
+class sdgs(models.Model):
+	sdg_Name = models.CharField(max_length=20, null=False)
+	sdg_Num = models.CharField(max_length=20, null=False)
+	sdg_Goal = models.CharField(max_length=20, null=False)
 
+	def __str__(self):
+		return self.sdg_Name

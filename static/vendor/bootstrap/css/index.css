@@ -96,6 +96,14 @@
   display: none;
 }
 
+/*-----SDGs永續發展目標-----*/
+.goal_img {
+  width: 5rem
+  height: auto;
+}
+
+
+
 /*-----外部評比-----*/
 .award_title {
   font-weight: 900;
