@@ -11,7 +11,7 @@ django.setup()
 
 from myapp.models import sdgs
 
-data = csv.reader(open("./sdg.csv", encoding="utf-8"),delimiter=",")
+data = csv.reader(open("./sdg.csv", encoding="big5"),delimiter=",")
 
 for row in data:
 	# row = row.encode('utf8')
