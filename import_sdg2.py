@@ -14,7 +14,7 @@ from myapp.models import sdgs
 data = csv.reader(open("./sdg.csv"),delimiter=",")
 
 for row in data:
-	row.encode('utf8')
+	row = row.encode('utf8')
 	if row[0] != 'sdg_Name':
 		unit = sdgs()
 		unit.sdg_Name = row[0]
