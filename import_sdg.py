@@ -20,4 +20,5 @@ for row in data:
 		unit.sdg_Name = row[0]
 		unit.sdg_Num = row[1]
 		unit.sdg_Goal = row[2]
+		unit.sdg_img_url = row[3]
 		unit.save()

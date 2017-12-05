@@ -1,8 +1,8 @@
-sdg_Name,sdg_Num,sdg_Goal
-3. 健康與福祉,3, 健康與福祉
-5. 性別平等,5, 性別平等
-7. 可負擔能源,7, 可負擔能源
-8. 就業與經濟成長,8, 就業與經濟成長
-9. 工業、創新與基礎建設,9, 工業、創新與基礎建設
-12. 責任消費與生產,12, 責任消費與生產
-13. 氣候行動,13, 氣候行動
+sdg_Name,sdg_Num,sdg_Goal,sdg_img_url
+3. 健康與福祉,3, 健康與福祉,https://i0.wp.com/www.un.org/sustainabledevelopment/wp-content/uploads/2015/05/E_SDG_Icons-03.jpg?fit=466%2C466
+5. 性別平等,5, 性別平等,https://i0.wp.com/www.un.org/sustainabledevelopment/wp-content/uploads/2015/05/E_SDG_Icons-05.jpg?fit=466%2C466
+7. 可負擔能源,7, 可負擔能源,https://i0.wp.com/www.un.org/sustainabledevelopment/wp-content/uploads/2015/05/E_SDG_Icons-07.jpg?fit=466%2C466
+8. 就業與經濟成長,8, 就業與經濟成長,https://i0.wp.com/www.un.org/sustainabledevelopment/wp-content/uploads/2015/05/E_SDG_Icons-08.jpg?fit=466%2C466
+9. 工業、創新與基礎建設,9, 工業、創新與基礎建設,https://i0.wp.com/www.un.org/sustainabledevelopment/wp-content/uploads/2015/05/E_SDG_Icons-09.jpg?fit=466%2C466
+12. 責任消費與生產,12, 責任消費與生產,https://i0.wp.com/www.un.org/sustainabledevelopment/wp-content/uploads/2015/05/E_SDG_Icons-12.jpg?fit=466%2C466
+13. 氣候行動,13, 氣候行動,https://i0.wp.com/www.un.org/sustainabledevelopment/wp-content/uploads/2015/05/E_SDG_Icons-13.jpg?fit=466%2C466
