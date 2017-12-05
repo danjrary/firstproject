@@ -4,7 +4,7 @@ project_dir = "/static/data"
 
 sys.path.append(project_dir)
 
-os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'firstproject.settings'
 
 import django
 
