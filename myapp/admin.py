@@ -13,7 +13,7 @@ class companyAdmin(admin.ModelAdmin):
 admin.site.register(company, companyAdmin)
 
 class sdgsAdmin(admin.ModelAdmin):
-	list_display=('id', 'sdg_Name')
+	list_display=('id', 'sdg_Name', 'sdg_img_url')
 	ordering=('id',)
 
 admin.site.register(sdgs, sdgsAdmin)

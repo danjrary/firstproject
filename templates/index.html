@@ -408,14 +408,17 @@
 
       <div class="mb-0 mt-4">
         <div>SDGs永續發展目標</div>
-        <div>
-          <img class="goal_img" src="https://i0.wp.com/www.un.org/sustainabledevelopment/wp-content/uploads/2015/05/E_SDG_Icons-03.jpg?fit=466%2C466" alt="">
-        </div>
-        
-        {% for sdg in goal %}
-        <div>{{sdg.sdg_Name}}</div>
-        <img src="{{sdg.sdg_Num}}" alt="">
+        <hr class="mt-2">
+        <div class="goal_area">
+          {% for sdg in goal %}
+          <div class="goal_center">
+            <div class="goal_display mt-1">
+              <img class="goal_img" src="{{sdg.sdg_img_url}}" alt="">
+              <div>{{sdg.sdg_Goal}}</div>
+            </div>
+          </div>
         {% endfor %}
+        </div>
       </div>
       <hr class="mt-2">
       <!-- 最新訊息 -->
@@ -921,6 +924,74 @@
         <i class="fa fa-fw fa-gratipay "></i>  社會資訊
       </div>
       <hr class="mt-2">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fa fa-dot-circle-o"></i>社會目標
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-xl-4 col-sm-12 mb-1">
+                  <div class="card text-white bg-danger o-hidden h-100">
+                    <div class="card_body_target">
+                      <div class="card-body-icon">
+                        <div class="target_number_red">1~2</div>
+                      </div>
+                      <div class="mb-3">
+                        短期目標
+                      </div>
+                      <div class="mr-5 h7">
+                        <ul>
+                          <li>成立卓爾榮譽學會</li>
+                          <li>與台清交進行計畫合作，成立創新研發中心</li>
+                          <li>東協及南亞台灣留學獎學金(首年集中印度)</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-sm-12 mb-1">
+                  <div class="card text-white bg-danger o-hidden h-100">
+                    <div class="card_body_target">
+                      <div class="card-body-icon">
+                        <div class="target_number_red">3~5</div>
+                      </div>
+                      <div class="mb-3">
+                        中期目標
+                      </div>
+                      <div class="mr-5 h7">
+                        <ul>
+                          <li>以核心研發能力和社會併肩，透過科技創新應用解決社會問題</li>
+                          <li>持續贊助學校</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-sm-12 mb-1">
+                  <div class="card text-white bg-danger o-hidden h-100">
+                    <div class="card_body_target">
+                      <div class="card-body-icon">
+                        <div class="target_number_red">5~</div>
+                      </div>
+                      <div class="mb-3">
+                        長期目標
+                      </div>
+                      <div class="mr-5 h7">
+                        <ul>
+                          <li>與海外分公司一起合作志工服務專案</li>
+                          <li>南向獎學金名額擴及南亞東協，帶動人才向台灣流動</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="row">
         <div class="col-xl-6 col-sm-6 mb-3">
           <div class="card">
