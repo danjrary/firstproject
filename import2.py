@@ -1,6 +1,6 @@
 import csv,sys,os
 
-project_dir = "/firstproject/"
+project_dir = "./firstproject/"
 
 sys.path.append(project_dir)
 
@@ -12,7 +12,7 @@ django.setup()
 
 from myapp.models import company
 
-data = csv.reader(open("/firstproject/data.csv"),delimiter=",")
+data = csv.reader(open("./firstproject/data.csv"),delimiter=",")
 
 for row in data:
 	if row[0] != 'cName':
