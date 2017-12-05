@@ -12,7 +12,7 @@ django.setup()
 
 from myapp.models import company
 
-data = csv.reader(open("/static/data.data.csv"),delimiter=",")
+data = csv.reader(open("/static/data/data.csv"),delimiter=",")
 
 for row in data:
 	if row[0] != 'cName':
