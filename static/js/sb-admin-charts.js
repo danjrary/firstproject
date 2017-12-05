@@ -129,10 +129,39 @@ var ctx = document.getElementById("PieChart_score");
 var PieChart_score = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    lables: ["", ""],
+    lables: ["揭露", "未揭露"],
     datasets: [{
       data: [80, 20],
       backgroundColor: ['#4285F4', '#D8D8D8'],
+    }],
+  },
+});
+
+
+// -- 女男比例 Pie Chart 
+
+var ctx = document.getElementById("PieChart_type");
+var PieChart_type = new Chart(ctx, {
+  type: 'doughnut',
+  data: {
+    labels: ["全職人員", "約聘人員", "派遣人員"],
+    datasets: [{
+      data: [97, 2, 1],
+      backgroundColor: ['#4285F4', '#dc3545', '#585859'],
+    }],
+  },
+});
+
+// -- 職務類別比例 Pie Chart 
+
+var ctx = document.getElementById("PieChart_job");
+var PieChart_job = new Chart(ctx, {
+  type: 'doughnut',
+  data: {
+    labels: ["研發人員", "管理人員", "行銷人員", "製造人員"],
+    datasets: [{
+      data: [89, 6, 3, 2],
+      backgroundColor: ['#007bff', '#dc3545', '#585859', '#28a745'],
     }],
   },
 });
