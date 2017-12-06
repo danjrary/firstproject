@@ -58,6 +58,7 @@ def index1(request):
 
 def index(request):
 	goal = sdgs.objects.all().order_by('id')
+	gris = gri.objects.all().order_by('id')
 	return render(request, "index.html", locals())
 
 def pdfjs(request):

@@ -1,6 +1,5 @@
 from django.contrib import admin
-from myapp.models import company
-from myapp.models import sdgs
+from myapp.models import *
 
 # Register your models here.
 
@@ -17,3 +16,11 @@ class sdgsAdmin(admin.ModelAdmin):
 	ordering=('id',)
 
 admin.site.register(sdgs, sdgsAdmin)
+
+# 匯入gri指標
+
+class griAdmin(admin.ModelAdmin):
+	list_display=('id', 'framework', 'version', 'ds_type', 'category', 'aspect', 'indicator', 'guidance', 'disclosure')
+	ordering=('id',)
+
+admin.site.register(gri, griAdmin)

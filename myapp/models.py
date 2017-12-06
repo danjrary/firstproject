@@ -19,3 +19,18 @@ class sdgs(models.Model):
 
 	def __str__(self):
 		return self.sdg_Name
+
+class gri(models.Model):
+	framework = models.CharField(max_length=200, null=False)
+	version = models.CharField(max_length=200, null=False)
+	ds_type = models.CharField(max_length=200, null=False)
+	category = models.CharField(max_length=200, null=False)
+	aspect = models.CharField(max_length=200, null=False)
+	indicator = models.CharField(max_length=200, null=False)
+	guidance = models.CharField(max_length=200, null=False)
+	disclosure = models.CharField(max_length=200, null=False)
+	assurance_third = models.CharField(max_length=200, null=False)
+	assurance_account = models.CharField(max_length=200, null=False)
+
+	def __str__(self):
+		return self.framework

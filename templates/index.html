@@ -1064,8 +1064,43 @@
           </div>
         </div>
       </div>
-      <!-- Example DataTables Card-->
+      <!-- GRI指標表 -->
       <div class="card mb-3">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable_gri" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>框架</th>
+                  <th>版本</th>
+                  <th>類型</th>
+                  <th>類別</th>
+                  <th>考量面</th>
+                  <th>指標</th>
+                  <th>說明</th>
+                  <th>揭露</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for gri in gris %}
+                <tr>
+                  <td>{{gri.framework}}</td>
+                  <td>{{gri.version}}</td>
+                  <td>{{gri.ds_type}}</td>
+                  <td>{{gri.category}}</td>
+                  <td>{{gri.aspect}}</td>
+                  <td>{{gri.indicator}}</td>
+                  <td>{{gri.guidance}}</td>
+                  <td>{{gri.disclosure}}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- Example DataTables Card-->
+      <div class="card mb-3 display_non">
         <div class="card-header">
           <i class="fa fa-table"></i> Data Table Example</div>
         <div class="card-body">
