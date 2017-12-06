@@ -165,3 +165,57 @@ var PieChart_job = new Chart(ctx, {
     }],
   },
 });
+
+
+// 歷年員工人數
+
+var ctx = document.getElementById("BarChart_employee");
+var BarChart_employee = new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ["2012", "2013", "2014", "2015", "2016", "2017"],
+    datasets: [{
+      label: "女性",
+      backgroundColor: "rgba(2,117,216,1)",
+      borderColor: "rgba(2,117,216,1)",
+      data: [815, 912, 1051, 1341, 2021, 2284],
+    },
+    {
+      label: "男性",
+      backgroundColor: "rgba(185,185,185,1)",
+      borderColor: "rgba(2,117,216,1)",
+      data: [4215, 5312, 6251, 7841, 9821, 14984],
+    },
+    ],
+  },
+  options: {
+    scales: {
+      xAxes: [{
+        time: {
+          unit: 'month'
+        },
+        gridLines: {
+          display: false
+        },
+        ticks: {
+          maxTicksLimit: 6
+        },
+        stacked: true
+      }],
+      yAxes: [{
+        ticks: {
+          min: 0,
+          max: 20000,
+          maxTicksLimit: 5
+        },
+        gridLines: {
+          display: true
+        },
+        stacked: true
+      }],
+    },
+    legend: {
+      display: false
+    },
+  }
+});
