@@ -183,3 +183,25 @@
   font-weight: 900;
   font-size: 1.1rem;
 }
+
+
+/*彈跳式pdf*/
+
+.iframe-container {    
+    padding-bottom: 60%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.iframe-container iframe,
+.iframe-container object,
+.iframe-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.report_btn {
+  display: block;
+}

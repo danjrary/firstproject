@@ -733,10 +733,14 @@
             <div class="list-group list-group-flush small">
               <a class="list-group-item list-group-item-action" href="#">
                 <div class="media">
-                  <iframe src="{% static 'pdf/Mediatek_2016_CSRreport.pdf' %}" frameborder="0" style="width: 500px; height: 500px"></iframe>
+                  <!-- <iframe src="{% static 'pdf/Mediatek_2016_CSRreport.pdf' %}" frameborder="0" style="width: 500px; height: 500px"></iframe> -->
                 </div>
               </a>
               <div class="row m-2">
+                <div class="col-lg-12 col-sm-12 text-centet">
+                  <img class="w-100" src="{% static 'images/csrreport_mediatek.png'%}" alt="">
+                  <a class="btn btn-primary view-pdf report_btn mb-3" href="https://firstprojectbook.herokuapp.com/static/pdf/Mediatek_2016_CSRreport.pdf">檢視報告</a>
+                </div>
                 <div class="col-lg-6 col-sm-12">
                   <div class="text-muted mt-2">報告名稱：</div><div>聯發科技2016年企業社會責任報告</div>
                   <div class="text-muted mt-2">出版年份：</div><div>2017年7月</div>
